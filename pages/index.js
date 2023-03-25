@@ -87,6 +87,7 @@ export default function Home() {
             </h2>
             <p className={inter.className}>
               Learn about Next.js in an interactive course with&nbsp;quizzes!
+              changing a little bit to test travis.
             </p>
           </a>
 
