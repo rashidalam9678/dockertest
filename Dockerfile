@@ -1,17 +1,17 @@
 FROM node:18.15.0-alpine3.16
 
-RUN mkdir /usr/src/app
+RUN mkdir /app
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY package*.json /usr/src/app
+COPY package*.json /app
 
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
+ENV PATH /app/node_modules/.bin:$PATH
 
 RUN npm install
 
 # Copy the rest of the application code
-COPY . /usr/src/app
+COPY . /app
 
 # Build the application
 RUN npm run build
